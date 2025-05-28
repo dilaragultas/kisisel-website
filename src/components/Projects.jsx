@@ -1,21 +1,34 @@
+import { dataContext } from '../context/context.jsx'
+import { useContext } from "react";
+
+
 export default function Projects() {
+
+    const { details } = useContext(dataContext)
+
     return (
         <>
             <div className="projects">
-                <h2 className="projectHeader">Projects</h2>
+                <h2 className="projectHeader">{details.projects.title}</h2>
                 <div>
-                    <img src="/assets/2.jpg" alt="" />
+                    <img src={details.projects.img} />
                     <div>
-                        <h3>Teknolojik Yemekler Internet Sitesi</h3>
-                        <p>Buraya aciklama gelecek</p>
+                        <h3>{details.projects.altTitle}</h3>
+                        <p>{details.projects.text}</p>
                         <div>
-                            <p>react</p>
-                            <p>redux</p>
-                            <p>vercel</p>
+                            {details.projects.tools.map((elm, index) => {
+                                return (
+                                    <p key={index}>{elm.name}</p>
+                                )
+                            })}
                         </div>
                         <div>
-                            <a href="">View Site</a>
-                            <a href="">Github</a>
+                            {details.projects.links.map((elm) => {
+                                return (
+                                    <a href={elm.url} target='_blank'>{elm.name}</a>
+                                )
+                            })}
+
                         </div>
                     </div>
                 </div>

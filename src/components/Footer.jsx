@@ -1,15 +1,23 @@
+import { dataContext } from '../context/context.jsx'
+import { useContext } from "react";
+
+
 export default function Footer() {
+
+    const { details } = useContext(dataContext)
+
     return (
         <>
             <div className="footerContainer">
-                <h1 className="footerHeader">Send me a message!</h1>
-                <p className="footerQ">Got a question or proposal, or just want to say hello? Go ahead.</p>
-                <p className="footerG">dilaragultas@gmail.com</p>
+                <h1 className="footerHeader">{details.footer.title}</h1>
+                <p className="footerQ">{details.footer.text}</p>
+                <p className="footerG">{details.footer.email}</p>
                 <div className="icons">
-                    <a href=""><i className="fa-brands fa-x-twitter"></i></a>
-                    <a href=""><i className="fa-brands fa-codepen"></i></a>
-                    <a href=""><i className="fa-brands fa-at"></i></a>
-                    <a href=""><i className="fa-brands fa-instagram"></i></a>
+                    {details.footer.icons.map((elm) => {
+                        return (
+                            <a href={elm.url} target='_blank'><i className={elm.class}></i></a>
+                        )
+                    })}
                 </div>
             </div>
         </>

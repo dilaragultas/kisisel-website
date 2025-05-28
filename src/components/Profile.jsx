@@ -21,11 +21,11 @@ export default function Profile() {
                         })}
                     </div>
 
-                    <img className="profilepic" src="/assets/4.jpg" alt="" />
+                    <img className="profilepic" src={details.profile.img} />
 
                     <div className="aboutme">
-                        <h3>About Me</h3>
-                        <p>Being excited to follow the new paths and new adventures.</p>
+                        <h3> {details.profile.title2}</h3>
+                        <p>{details.profile.text}</p>
                     </div>
 
                 </div>

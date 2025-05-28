@@ -6,7 +6,7 @@ import { dataContext } from '../context/context.jsx'
 export default function FirstPage() {
 
     const [state, setState] = useState(true);
-    const { languageChange, details } = useContext(dataContext)
+    const { languageChange, details, languageChoice } = useContext(dataContext)
 
     return (
         <>
@@ -14,7 +14,7 @@ export default function FirstPage() {
                 <div className="firstLine">
                     <p className="name">Dilara</p>
                     <div className="both">
-                        <button type='button' className="languageSwitch" onClick={languageChange}>TÜRKÇE'YE GEÇ</button>
+                        {languageChoice === 'en' ? (<button type='button' className="languageSwitch" onClick={languageChange}>TÜRKÇE'YE GEÇ</button>) : (<button type='button' className="languageSwitch" onClick={languageChange}>SWITCH TO ENGLISH</button>)}
                         <FormGroup switch>
                             <Input
                                 type="switch"

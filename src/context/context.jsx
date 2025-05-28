@@ -6,7 +6,7 @@ export const dataContext = createContext()
 
 export default function DataContextProvider({ children }) {
     const [languageChoice, setLanguageChoice] = useState('en')
-    const [details, setDetails] = useState('details.en')
+    const [details, setDetails] = useState(languages.en)
 
     function postData() {
         axios.post('https://reqres.in/api/workintech', languages[languageChoice], {
@@ -27,7 +27,7 @@ export default function DataContextProvider({ children }) {
     }
 
     return (
-        <dataContext.Provider value={{ languageChange, details }}>
+        <dataContext.Provider value={{ languageChange, details, languageChoice }}>
             {children}
         </dataContext.Provider>
     )

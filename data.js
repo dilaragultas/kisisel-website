@@ -44,7 +44,8 @@ export const languages = {
             links: [
                 { url: 'https://github.com/dilaragultas/fsweb-s8-challenge-pizza', name: 'View Site' },
                 { url: 'https://github.com/dilaragultas', name: 'Github' }
-            ]
+            ],
+            img: '/assets/2.jpg'
         },
         footer: {
             title: 'Bana mesaj göndermek ister misiniz?',
@@ -103,7 +104,8 @@ export const languages = {
             links: [
                 { url: 'https://github.com/dilaragultas/fsweb-s8-challenge-pizza', name: 'View Site' },
                 { url: 'https://github.com/dilaragultas', name: 'Github' }
-            ]
+            ],
+            img: '/assets/2.jpg'
         },
         footer: {
             title: 'Send me a message!',
