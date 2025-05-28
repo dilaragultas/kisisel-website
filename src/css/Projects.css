@@ -1,0 +1,116 @@
+.projectsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #D4F78D;
+    padding: 60px 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.darkModeCover .projectsContainer {
+    background-color: #1a210b;
+}
+
+.projectHeader {
+    font-size: 48px;
+    font-weight: bold;
+    color: #4A24EA;
+    margin-bottom: 40px;
+    text-align: left;
+    width: 80%;
+}
+
+.darkModeCover .projectHeader {
+    color: #cbf281;
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.projects img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+}
+
+.darkModeCover .projects {
+    background-color: #2a2727;
+}
+
+.projectCover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+}
+
+.projectsTitle {
+    font-size: 32px;
+    font-weight: bold;
+    color: #4A24EA;
+    margin-bottom: 16px;
+}
+
+.darkModeCover .projectsTitle {
+    color: #c1baed;
+}
+
+.projectsText {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.darkModeCover .projectsText {
+    color: white;
+}
+
+.projectsTools {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.projectsToolsName {
+    background-color: #4A24EA;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 16px;
+}
+
+.darkModeCover .projectsToolsName {
+    background-color: #8173da
+}
+
+.projectsLinks {
+    display: flex;
+    gap: 24px;
+    font-size: 18px;
+}
+
+.projectsLinks a {
+    color: #1A0DAB;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.darkModeCover .projectsLinks a {
+    color: #cbf281;
+}
+
+.projectsLinks a:hover {
+    color: #4A24EA;
+}

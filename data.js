@@ -1,7 +1,7 @@
 export const languages = {
     tr: {
         firstPage: {
-            title: 'Ben ön yüz geliştiricisiyim...',
+            title: 'Ben önyüz geliştiricisiyim...',
             text: 'Harika kullanıcı deneyimleri sunan, sağlam ve ölçeklenebilir ön yüz ürünleri tasarlamayı seviyorum.',
             img: '/assets/3.jpg',
             links: [

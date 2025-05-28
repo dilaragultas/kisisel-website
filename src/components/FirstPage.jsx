@@ -1,16 +1,17 @@
 import { useState, useContext } from "react";
 import { FormGroup, Input, Label } from "reactstrap";
 import { dataContext } from '../context/context.jsx'
+import '../css/firstPage.css'
 
 
 export default function FirstPage() {
 
-    const [state, setState] = useState(true);
-    const { languageChange, details, languageChoice } = useContext(dataContext)
+
+    const { languageChange, details, languageChoice, darkMode, darkModeChanger } = useContext(dataContext)
 
     return (
         <>
-            <div >
+            <div className="firstPage">
                 <div className="firstLine">
                     <p className="name">Dilara</p>
                     <div className="both">
@@ -18,31 +19,30 @@ export default function FirstPage() {
                         <FormGroup switch>
                             <Input
                                 type="switch"
-                                checked={state}
-                                onClick={() => {
-                                    setState(!state);
-                                }}
+                                checked={!darkMode}
+                                onClick={darkModeChanger}
                             />
                             <Label check className="darkMode">DARK MODE</Label>
                         </FormGroup>
-                        <div className="firstpic">
-                            <div className="vertical">
-                                <p>{details.firstPage.title}</p>
-                                <p>{details.firstPage.text}</p>
-                                <div>
-                                    {details.firstPage.links.map((elm, index) => {
-                                        return (<button key={index}>
-                                            <i className={elm.class}></i>
-                                            <p> {elm.name} </p>
-                                        </button>)
-                                    })}
-
-                                </div>
-                            </div>
-                            <img src={details.firstPage.img} />
-
-                        </div>
                     </div>
+                    <div className="firstpic">
+                        <div className="vertical">
+                            <p className="firstText">{details.firstPage.title}</p>
+                            <p className="secondText">{details.firstPage.text}</p>
+                            <div>
+                                {details.firstPage.links.map((elm, index) => {
+                                    return (<button className='linkbutton' key={index}>
+                                        <i className={`${elm.class} firstIcons`}></i>
+                                        <p className="linktext"> {elm.name} </p>
+                                    </button>)
+                                })}
+
+                            </div>
+                        </div>
+                        <img src={details.firstPage.img} />
+
+                    </div>
+
                 </div>
 
             </div>

@@ -1,5 +1,6 @@
 import { dataContext } from '../context/context.jsx'
 import { useContext } from "react";
+import '../css/Footer.css'
 
 
 export default function Footer() {

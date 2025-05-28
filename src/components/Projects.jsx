@@ -1,5 +1,6 @@
 import { dataContext } from '../context/context.jsx'
 import { useContext } from "react";
+import '../css/Projects.css'
 
 
 export default function Projects() {
@@ -8,21 +9,21 @@ export default function Projects() {
 
     return (
         <>
-            <div className="projects">
+            <div className="projectsContainer">
                 <h2 className="projectHeader">{details.projects.title}</h2>
-                <div>
+                <div className='projects'>
                     <img src={details.projects.img} />
-                    <div>
-                        <h3>{details.projects.altTitle}</h3>
-                        <p>{details.projects.text}</p>
-                        <div>
+                    <div className='projectCover'>
+                        <h3 className='projectsTitle'>{details.projects.altTitle}</h3>
+                        <p className='projectsText'>{details.projects.text}</p>
+                        <div className='projectsTools'>
                             {details.projects.tools.map((elm, index) => {
                                 return (
-                                    <p key={index}>{elm.name}</p>
+                                    <p className='projectsToolsName' key={index}>{elm.name}</p>
                                 )
                             })}
                         </div>
-                        <div>
+                        <div className='projectsLinks'>
                             {details.projects.links.map((elm) => {
                                 return (
                                     <a href={elm.url} target='_blank'>{elm.name}</a>

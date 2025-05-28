@@ -1,5 +1,6 @@
 import { dataContext } from '../context/context.jsx'
 import { useContext } from "react";
+import '../css/Skills.css'
 
 export default function Skills() {
 
@@ -7,14 +8,14 @@ export default function Skills() {
 
     return (
         <>
-            <div className="skills">
-                <p> {details.skills.title} </p>
-                <div className="">
+            <div className="skillsContainer">
+                <p className='skillsTitle'> {details.skills.title} </p>
+                <div className="skillsPic">
                     {details.skills.img.map((elm, index) => {
                         return (
-                            <div key={index} className="skillsPic">
+                            <div key={index} className="skillsEach">
                                 <img src={elm.link} />
-                                <p>{elm.name}</p>
+                                <p className='skillsName'>{elm.name}</p>
                             </div>
                         )
                     })}

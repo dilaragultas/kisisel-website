@@ -6,17 +6,22 @@ import Skills from './components/Skills'
 import Profile from './components/Profile';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
+import { useContext } from 'react';
+import { dataContext } from './context/context';
 
 function App() {
 
+  const { darkMode } = useContext(dataContext)
 
   return (
     <>
-      <FirstPage />
-      <Skills />
-      <Profile />
-      <Projects />
-      <Footer />
+      <div className={darkMode ? 'darkModeCover' : ''}>
+        <FirstPage />
+        <Skills />
+        <Profile />
+        <Projects />
+        <Footer />
+      </div>
     </>
   )
 }

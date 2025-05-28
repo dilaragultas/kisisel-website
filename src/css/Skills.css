@@ -1,0 +1,54 @@
+.skillsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    gap: 10rem;
+    padding: 6rem 0;
+}
+
+.darkModeCover .skillsContainer {
+    background: #252128;
+}
+
+.skillsTitle {
+    font-size: 3rem;
+    color: #4C2CF0;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.darkModeCover .skillsTitle {
+    color: #cbf281;
+}
+
+.skillsPic {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 4rem;
+}
+
+.skillsEach {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.skillsEach img {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.skillsName {
+    font-size: 1.5rem;
+    color: #555555;
+    font-weight: 500;
+}
+
+.darkModeCover .skillsName {
+    color: #cbf281;
+}
