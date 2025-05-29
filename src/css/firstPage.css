@@ -96,6 +96,7 @@
 .darkModeCover .linkbutton {
     background: #252128;
     color: white;
+    border: 2px solid white;
 }
 
 .linkbutton:hover {

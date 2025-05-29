@@ -14,7 +14,9 @@ export default function DataContextProvider({ children }) {
     })
 
     const [darkMode, setDarkMode] = useState(() => {
-        return localStorage.getItem('darkMode') || false
+        const saved = localStorage.getItem('darkMode')
+        return saved === null ? false : saved === 'true'
+
     })
 
     useEffect(() => {

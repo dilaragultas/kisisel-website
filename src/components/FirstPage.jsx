@@ -6,6 +6,13 @@ import '../css/firstPage.css'
 
 export default function FirstPage() {
 
+    const handleGithub = () => {
+        window.open('https://github.com/dilaragultas', '_blank')
+    }
+
+    const handleLinkedIn = () => {
+        window.open('https://www.linkedin.com/in/%C3%B6zlem-dilara-g%C3%BClta%C5%9F-y%C4%B1ld%C4%B1r%C4%B1m-184799180/', '_blank')
+    }
 
     const { languageChange, details, languageChoice, darkMode, darkModeChanger } = useContext(dataContext)
 
@@ -19,7 +26,6 @@ export default function FirstPage() {
                         {darkMode ? (<FormGroup switch>
                             <Input
                                 type="switch"
-                                checked={!darkMode}
                                 onClick={darkModeChanger}
                             />
                             <Label check className="darkMode">LIGHT MODE</Label>
@@ -38,7 +44,7 @@ export default function FirstPage() {
                             <p className="secondText">{details.firstPage.text}</p>
                             <div>
                                 {details.firstPage.links.map((elm, index) => {
-                                    return (<button className='linkbutton' key={index}>
+                                    return (<button className='linkbutton' key={index} onClick={index === 0 ? handleGithub : handleLinkedIn}>
                                         <i className={`${elm.class} firstIcons`}></i>
                                         <p className="linktext"> {elm.name} </p>
                                     </button>)
