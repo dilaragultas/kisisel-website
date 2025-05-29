@@ -26,16 +26,18 @@ export default function FirstPage() {
                         {darkMode ? (<FormGroup switch>
                             <Input
                                 type="switch"
+                                id='switch'
                                 onClick={darkModeChanger}
                             />
-                            <Label check className="darkMode">LIGHT MODE</Label>
+                            <Label htmlFor="switch" check className="darkMode">LIGHT MODE</Label>
                         </FormGroup>) : (<FormGroup switch>
                             <Input
                                 type="switch"
+                                id="switch"
                                 checked={!darkMode}
                                 onClick={darkModeChanger}
                             />
-                            <Label check className="darkMode">DARK MODE</Label>
+                            <Label htmlFor="switch" check className="darkMode">DARK MODE</Label>
                         </FormGroup>)}
                     </div>
                     <div className="firstpic">

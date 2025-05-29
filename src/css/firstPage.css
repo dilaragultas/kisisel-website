@@ -50,6 +50,10 @@
     font-weight: 600;
 }
 
+.darkModeCover .darkMode {
+    color: #cdf45b;
+}
+
 .firstpic {
     display: flex;
     align-items: center;
