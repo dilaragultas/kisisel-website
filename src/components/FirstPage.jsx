@@ -16,14 +16,21 @@ export default function FirstPage() {
                     <p className="name">Dilara</p>
                     <div className="both">
                         {languageChoice === 'en' ? (<button type='button' className="languageSwitch" onClick={languageChange}>TÜRKÇE'YE GEÇ</button>) : (<button type='button' className="languageSwitch" onClick={languageChange}>SWITCH TO ENGLISH</button>)}
-                        <FormGroup switch>
+                        {darkMode ? (<FormGroup switch>
+                            <Input
+                                type="switch"
+                                checked={!darkMode}
+                                onClick={darkModeChanger}
+                            />
+                            <Label check className="darkMode">LIGHT MODE</Label>
+                        </FormGroup>) : (<FormGroup switch>
                             <Input
                                 type="switch"
                                 checked={!darkMode}
                                 onClick={darkModeChanger}
                             />
                             <Label check className="darkMode">DARK MODE</Label>
-                        </FormGroup>
+                        </FormGroup>)}
                     </div>
                     <div className="firstpic">
                         <div className="vertical">

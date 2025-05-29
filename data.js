@@ -92,7 +92,7 @@ export const languages = {
             ],
             img: '/assets/4.jpg',
             title2: 'About Me',
-            text: 'I am Dilara, after completing my bachelor degree in political science, I started to work. Starting my career in cloud and technology companies led me to focus on the software. I am currently completing my education to become a full stack developer.'
+            text: 'I am Dilara, after finished my bachelor degree in political science, I started to work. Starting my career in cloud and technology companies led me to focus on the software. I am currently completing my education to become a full stack developer.'
         },
         projects: {
             title: 'Projects',

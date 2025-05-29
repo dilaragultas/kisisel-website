@@ -5,9 +5,30 @@ import { createContext, useEffect, useState } from "react";
 export const dataContext = createContext()
 
 export default function DataContextProvider({ children }) {
-    const [languageChoice, setLanguageChoice] = useState('en')
-    const [details, setDetails] = useState(languages.en)
-    const [darkMode, setDarkMode] = useState(false)
+    const [languageChoice, setLanguageChoice] = useState(() => {
+        return localStorage.getItem('language') || 'en'
+    })
+    const [details, setDetails] = useState(() => {
+        const storedDetails = localStorage.getItem('details')
+        return storedDetails ? JSON.parse(storedDetails) : languages.en
+    })
+
+    const [darkMode, setDarkMode] = useState(() => {
+        return localStorage.getItem('darkMode') || false
+    })
+
+    useEffect(() => {
+        localStorage.setItem('darkMode', darkMode)
+    }, [darkMode])
+
+    useEffect(() => {
+        localStorage.setItem('language', languageChoice)
+    }, [languageChoice])
+
+    useEffect(() => {
+        localStorage.setItem('details', JSON.stringify(details))
+    }, [details])
+
 
     function postData() {
         axios.post('https://reqres.in/api/workintech', languages[languageChoice], {
