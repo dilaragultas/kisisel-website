@@ -42,8 +42,8 @@ export const languages = {
                 { name: 'react' }, { name: 'redux' }, { name: 'vercel' }
             ],
             links: [
-                { url: 'https://github.com/dilaragultas/fsweb-s8-challenge-pizza', name: 'View Site' },
-                { url: 'https://github.com/dilaragultas', name: 'Github' }
+                { url: 'https://fsweb-s8-challenge-pizza-xi.vercel.app/', name: 'View Site' },
+                { url: 'https://github.com/dilaragultas/fsweb-s8-challenge-pizza', name: 'Github' }
             ],
             img: '/assets/2.jpg'
         },
@@ -102,8 +102,9 @@ export const languages = {
                 { name: 'react' }, { name: 'redux' }, { name: 'vercel' }
             ],
             links: [
-                { url: 'https://github.com/dilaragultas/fsweb-s8-challenge-pizza', name: 'View Site' },
-                { url: 'https://github.com/dilaragultas', name: 'Github' }
+                { url: 'https://fsweb-s8-challenge-pizza-xi.vercel.app/', name: 'View Site' },
+                { url: 'https://github.com/dilaragultas/fsweb-s8-challenge-pizza', name: 'Github' }
+
             ],
             img: '/assets/2.jpg'
         },
